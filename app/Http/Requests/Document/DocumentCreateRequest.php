@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Document;
 
 use Illuminate\Foundation\Http\FormRequest;
 use JetBrains\PhpStorm\ArrayShape;
 
-class DocumentListRequest extends FormRequest
+class DocumentCreateRequest extends FormRequest
 {
     /**
      *
@@ -16,7 +16,10 @@ class DocumentListRequest extends FormRequest
     #[ArrayShape([])] public function rules(): array
     {
         return [
-
+            'title' => 'required|string|max:255',
+            'content' => 'required|string|max:10000',
+            'user' => 'integer',
+            'folder' => 'integer',
         ];
     }
 

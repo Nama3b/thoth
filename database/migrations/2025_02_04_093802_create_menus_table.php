@@ -14,11 +14,8 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('document_name');
-            $table->unsignedBigInteger('document_id')->nullable();
+            $table->json('documents')->nullable();
             $table->timestamps();
-
-            $table->foreign('document_id')->references('id')->on('documents')->onDelete('set null');
         });
     }
 

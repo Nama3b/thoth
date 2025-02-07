@@ -11,11 +11,25 @@ class DocumentService implements IDocumentService
     {
         $query = Document::query();
 
-
     }
 
     public function detail($id)
     {
+        // TODO: Implement detail() method.
+    }
 
+    public function create($request)
+    {
+        // TODO: Implement create() method.
+    }
+
+    public function edit($id, $request)
+    {
+        // TODO: Implement edit() method.
+    }
+
+    public function delete($id)
+    {
+        // TODO: Implement delete() method.
     }
 }
